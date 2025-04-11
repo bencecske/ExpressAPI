@@ -39,6 +39,7 @@ app.post('/register', (req, res) => {
         })
         console.log("no data");
     }
+    userList = JSON.parse(fs.readFileSync('./Data/users.json'));
 })
 
 app.get('/login', (req, res) => {
@@ -62,21 +63,32 @@ app.get('/login', (req, res) => {
     }
 });
 
-app.patch('/users/modify/:id', (req, res) => {
-    const searchID = req.params.id * 1;
-    let user = userList.find(el => el.ID === searchID)
-    if(!user){
-        res.status(404).json({
-            message: "User with this ID was not found."
-        })
+app.patch('/users/:name', (req, res) => {
+    let user = userList.find(el => el.name === req.params.name);
+
+    if (!user) {
+        return res.status(404).json({
+            message: "User with this name was not found."
+        });
+    }
+    if (!req.body || typeof req.body !== 'object') {
+        return res.status(400).json({
+            message: "Invalid or missing JSON body."
+        });
     }
     let index = userList.indexOf(user);
-    Object.assign(user, req.body)
+    Object.assign(user, req.body);
     userList[index] = user;
 
-    fs.writeFile('./Data/users.json', JSON.stringify(userList), (err) => {
+    fs.writeFile('./Data/users.json', JSON.stringify(userList, null, 2), (err) => {
+        if (err) {
+            return res.status(500).json({ message: "Error writing to file." });
+        }
+        
         res.status(201).json({
             user: user
-        })
-    })
+        });
+    });
+
+    userList = JSON.parse(fs.readFileSync('./Data/users.json'));
 });

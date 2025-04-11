@@ -78,6 +78,7 @@ app.post('/Items', (req, res) => {
             item: newItem
         })
     })
+    itemList = JSON.parse(fs.readFileSync('./Data/items.json'))
 });
 
 app.patch('/Items/:id', (req, res) => {
@@ -98,6 +99,7 @@ app.patch('/Items/:id', (req, res) => {
                 item: item
             })
         })
+        itemList = JSON.parse(fs.readFileSync('./Data/items.json'))
     } catch (error) {
         console.log(error);
     }
@@ -127,5 +129,6 @@ app.delete('/Items/:id', (req, res) => {
             itemList[i].ID = j
             fs.writeFile('./Data/items.json', JSON.stringify(itemList), (err) => {})
         }
-    }  
+    }
+    itemList = JSON.parse(fs.readFileSync('./Data/items.json'))  
 })

@@ -29,6 +29,8 @@ app.post('/Datas', (req, res) => {
             item: newItem
         })
     })
+    dataList = JSON.parse(fs.readFileSync('./Data/datas.json'));
+    graphList = JSON.parse(fs.readFileSync('./Data/datas-graph.json'));
 });
 
 app.get('/Graphs', (req, res)=> {

@@ -1,2 +1,24 @@
-[{"ID":1,"name":"Bence","password":"sziageci","email":"geci@gmail.com","role":"vasarlo","inCart":0,"inCartID":[0]},
-{"ID":1,"name":"Hofi","password":"sziageci","email":"geci@gmail.com","role":"admin","inCart":0,"inCartID":[0]}]
+[
+  {
+    "ID": 1,
+    "name": "Bence",
+    "password": "sziageci",
+    "email": "geci@gmail.com",
+    "role": "vasarlo",
+    "inCart": 0,
+    "inCartID": []
+  },
+  {
+    "ID": 1,
+    "name": "Hofi",
+    "password": "sziageci",
+    "email": "geci@gmail.com",
+    "role": "admin",
+    "inCart": 3,
+    "inCartID": [
+      "2",
+      "1",
+      "3"
+    ]
+  }
+]
