@@ -89,6 +89,5 @@ app.patch('/users/:name', (req, res) => {
             user: user
         });
     });
-
     userList = JSON.parse(fs.readFileSync('./Data/users.json'));
 });

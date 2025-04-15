@@ -30,8 +30,14 @@ app.listen(3000, () => {
 })
 
 app.get('/', (req, res) => {
-    res.send("ExpressAPI");
+  res.json({
+    ok: true,
+    verzió: "1.0",
+    név: "WebShop API",
+    dev: "Pánczél"
+  });
 })
+
 
 eval(fs.readFileSync('./EndPoints/itemEndPoints.js') + '');
 eval(fs.readFileSync('./EndPoints/userEndPoints.js') + '');

@@ -1,2 +1,2 @@
 cd C:\Users\bence\Desktop\ExpressAPI
-npm run dev
+node app.js
