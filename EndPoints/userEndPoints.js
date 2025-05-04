@@ -17,8 +17,20 @@ app.get('/users/:name', (req, res) => {
     })
 });
 
+app.get('/usersbyid/:id', (req, res) => {
+    const searchID = req.params.id;
+    let user = userList.find(el => el.ID == searchID)
+    if(!user){
+        res.status(404).json({
+            message: "User with this id was not found."
+        })
+    }
+    res.status(200).json({
+        user: user
+    })
+});
+
 app.post('/register', (req, res) => {
-    console.log(req.body)
     let newUserID;
     if (userList.length > 0) {
         newUserID = (userList[userList.length - 1].ID + 1);
@@ -26,11 +38,12 @@ app.post('/register', (req, res) => {
         newUserID = 1;
     }
     if (req.body.name != undefined && req.body.password != undefined && req.body.email != undefined) {
-        const newUser = Object.assign({ID: newUserID, name: req.body.name, password: req.body.password, email: req.body.email}, {role: "vasarlo", inCart: 0, inCartID: [0]});
+        const newUser = Object.assign({ID: newUserID, name: req.body.name, password: req.body.password, email: req.body.email, address: req.body.address, phone: req.body.phone, role: "vasarlo", inCart: 0, inCartID: [], orders: []});
         userList.push(newUser);
         fs.writeFile('./Data/users.json', JSON.stringify(userList), (err) => {
-        res.status(201).json({
-            user: newUser
+            userList = JSON.parse(fs.readFileSync('./Data/users.json'));
+            res.status(201).json({
+                user: newUser
         })
     })
     } else {
@@ -39,7 +52,6 @@ app.post('/register', (req, res) => {
         })
         console.log("no data");
     }
-    userList = JSON.parse(fs.readFileSync('./Data/users.json'));
 })
 
 app.get('/login', (req, res) => {
@@ -81,6 +93,7 @@ app.patch('/users/:name', (req, res) => {
     userList[index] = user;
 
     fs.writeFile('./Data/users.json', JSON.stringify(userList, null, 2), (err) => {
+        userList = JSON.parse(fs.readFileSync('./Data/users.json'));
         if (err) {
             return res.status(500).json({ message: "Error writing to file." });
         }
@@ -89,5 +102,4 @@ app.patch('/users/:name', (req, res) => {
             user: user
         });
     });
-    userList = JSON.parse(fs.readFileSync('./Data/users.json'));
 });

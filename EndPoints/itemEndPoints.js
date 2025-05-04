@@ -74,11 +74,11 @@ app.post('/Items', (req, res) => {
     const newItem = Object.assign({ID: newItemID}, req.body);
     itemList.push(newItem);
     fs.writeFile('./Data/items.json', JSON.stringify(itemList), (err) => {
+        itemList = JSON.parse(fs.readFileSync('./Data/items.json'))
         res.status(201).json({
             item: newItem
         })
     })
-    itemList = JSON.parse(fs.readFileSync('./Data/items.json'))
 });
 
 app.patch('/Items/:id', (req, res) => {
@@ -95,11 +95,11 @@ app.patch('/Items/:id', (req, res) => {
         itemList[index] = item;
     
         fs.writeFile('./Data/items.json', JSON.stringify(itemList), (err) => {
+            itemList = JSON.parse(fs.readFileSync('./Data/items.json'))
             res.status(201).json({
                 item: item
             })
         })
-        itemList = JSON.parse(fs.readFileSync('./Data/items.json'))
     } catch (error) {
         console.log(error);
     }
@@ -127,8 +127,29 @@ app.delete('/Items/:id', (req, res) => {
         if (itemList[i].ID != i + 1) {
             let j = i + 1
             itemList[i].ID = j
-            fs.writeFile('./Data/items.json', JSON.stringify(itemList), (err) => {})
+            fs.writeFile('./Data/items.json', JSON.stringify(itemList), (err) => {
+                itemList = JSON.parse(fs.readFileSync('./Data/items.json'))  
+            })
         }
     }
-    itemList = JSON.parse(fs.readFileSync('./Data/items.json'))  
 })
+
+app.get('/images', (req, res) => {
+    const imagesDir = path.join(__dirname, 'Data/Images');
+  
+    fs.readdir(imagesDir, (err, files) => {
+      if (err) {
+        return res.status(500).json({ error: 'Nem sikerült beolvasni a képeket.' });
+      }
+  
+      const imageFiles = files.filter(file =>
+        /\.(jpg|jpeg|png|gif)$/i.test(file)
+      );
+  
+      const imagePaths = imageFiles.map(file => `/images/${file}`);
+  
+      res.json(imagePaths);
+    });
+  });
+  
+app.use('/images', express.static(path.join(__dirname, 'Data/Images')));

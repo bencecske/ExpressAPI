@@ -1,0 +1,99 @@
+1. Üzemeltető adatai
+Cégnév: [Webshop Kft.]
+
+Székhely: [1234 Budapest, Példa utca 1.]
+
+Cégjegyzékszám: [01-09-123456]
+
+Adószám: [12345678-1-42]
+
+Képviselő: [Kovács Péter]
+
+E-mail: [info@webshop.hu]
+
+Telefon: [+36 30 123 4567]
+
+Tárhelyszolgáltató: [Tárhely Cégnév, cím, webcím]
+
+🟡 Cserélendő: természetesen ezeket az adatokat a saját céged adataival kell kitölteni.
+
+2. A szerződés tárgya
+Jelen ÁSZF az [webshop neve / www.webshop.hu] webáruházon keresztül történő online vásárlás feltételeit szabályozza. A webáruházban elsősorban ruházati termékek, cipők, kiegészítők kerülnek értékesítésre.
+
+3. A termékek köre
+A webshopban kínált termékek főbb jellemzői a termékoldalakon kerülnek feltüntetésre. A képek illusztrációk, a színárnyalatok kis mértékben eltérhetnek a valóságtól.
+
+🟡 Javasolt megjegyezni, ha bizonyos termékek egyedi gyártásúak, vagy rendelésre készülnek (pl. feliratozott pólók).
+
+4. Rendelés menete
+Termék kosárba helyezése
+
+Pénztárban adatok megadása
+
+Fizetési mód kiválasztása
+
+Rendelés jóváhagyása
+
+Visszaigazolás e-mailben
+
+A szerződés akkor jön létre, amikor a vásárló e-mailben megkapja a rendelés visszaigazolását.
+
+5. Szállítási és fizetési feltételek
+Szállítási módok:
+
+Futárszolgálat: GLS, Foxpost, MPL
+
+Személyes átvétel: (csak ha van ilyen lehetőség)
+
+Szállítási díjak:
+
+0–20 000 Ft rendelési értékig: 1 490 Ft
+
+20 000 Ft felett: ingyenes szállítás
+
+Fizetési módok:
+
+Bankkártyás fizetés
+
+Utánvét (készpénz/kártya)
+
+Előre utalás
+
+🟡 Itt pontosan kell szerepelnie a szállítási díjaknak és opcióknak, különösen, ha több országba szállítotok.
+
+6. Elállási jog
+A vásárló a termék átvételétől számított 14 naptári napon belül indoklás nélkül elállhat a vásárlástól. A termék visszaküldésének költsége a vásárlót terheli.
+
+Elállási nyilatkozatot a következő módon tehet:
+
+írásban e-mailben vagy
+
+az elállási nyilatkozat-minta használatával
+
+🔵 Javasolt: egy link vagy csatolt PDF az elállási nyilatkozat mintához.
+
+7. Szavatosság és jótállás
+Termékeinkre a hatályos jogszabályok szerinti kellékszavatosság és – ha értelmezhető – jótállás érvényes.
+
+🟡 Ha a webshopban vannak olyan termékek, amikre kötelező jótállás vonatkozik (pl. 10 000 Ft feletti cipők), ezt részletezni kell.
+
+8. Panaszkezelés
+Panaszkezelés lehetséges:
+
+e-mailben: [panasz@webshop.hu]
+
+postai úton: [székhely címe]
+
+telefonon: [ügyfélszolgálat száma]
+
+Fogyasztói jogvita esetén békéltető testülethez is fordulhat:
+[Budapesti Békéltető Testület – cím, elérhetőség]
+
+9. Adatkezelés
+A vásárlók személyes adatainak kezelése a [Adatkezelési Tájékoztatóban] foglaltak szerint történik, amely elérhető itt:
+👉 [https://webshop.hu/adatvedelem]
+
+10. Záró rendelkezések
+A jelen ÁSZF-ben nem szabályozott kérdésekben a Polgári Törvénykönyv, az elektronikus kereskedelmi szolgáltatásokról szóló törvény, valamint a fogyasztóvédelmi rendelkezések az irányadóak.
+
+Az üzemeltető fenntartja a jogot, hogy az ÁSZF-et egyoldalúan módosítsa. A módosítások a közzététellel lépnek hatályba.
