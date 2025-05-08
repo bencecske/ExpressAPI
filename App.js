@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const stripe = require("stripe")("");
+const stripe = require("stripe")("sk_test_51RDr7k4FFIWXdfs8ItDIT7VOGQ0SZTDuyUUh6Xb28V5rSqtvys8QX22d4bqLlzg99iKCiSq33shPc8SrOUQnDjNn00kqnoofnB");
 
 const app = express();
 app.use(express.json())
