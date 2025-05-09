@@ -3,24 +3,12 @@
     "ID": 1,
     "name": "Bence",
     "password": "sziageci",
-    "email": "geci@gmail.com",
-    "address": "1165 Budapest, Szabadság utca 8.",
-    "phone": "+36307845245",
-    "role": "vasarlo",
-    "inCart": 11,
-    "inCartID": [
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3",
-      "3"
-    ],
+    "email": "xd@gmail.com",
+    "address": "1165 Budapest, Szabadság utca 18.",
+    "phone": "06301234567",
+    "role": "admin",
+    "inCart": 0,
+    "inCartID": [],
     "orders": [
       1,
       3
@@ -34,10 +22,8 @@
     "address": "1165 Budapest, Szabadság utca 8.",
     "phone": "+36304566543",
     "role": "vasralo",
-    "inCart": 1,
-    "inCartID": [
-      "2"
-    ],
+    "inCart": 0,
+    "inCartID": [],
     "orders": [
       2
     ]
